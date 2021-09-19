@@ -61,8 +61,16 @@ http://localhost:3000/api/ads?min=10&max=63
 
 ## TAGS
 
+Para ver todas las tags, se debe realizar la siguiente llamada a la API
 ```
 http://localhost:3000/api/ads?tags
+```
+
+Al hacer esta llamada, se cargará una vista en el front donde aparecen todos los tags disponibles. Se podrán seleccionar, y al pulsar el botón de enviar, haremos una llamada a la API para buscar los artículos con las tags seleccionadas.
+
+Esa misma llamada se puede hacer manualmente de la siguiente manera:
+
+```
 http://localhost:3000/api/ads?tags=lifestyle
 http://localhost:3000/api/ads?tags=lifestyle-diy
 
