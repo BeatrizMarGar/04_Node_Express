@@ -52,7 +52,7 @@ app.use(function(err, req, res, next) {
 
 
 app.listen(3000, ()=>{
-  console.log("coso")
+  console.log("Servidor en el puerto 3000")
 })
 
 module.exports = app;
