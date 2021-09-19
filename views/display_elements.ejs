@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Nodepop</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <header>
+        <h1>NODEPOP</h1>
+        <button onclick="window.location = '/' "> INICIO </button>
+        <button onclick="window.location = '/api/ads'">TODOS LOS ARTÍCULOS</button>
+        <button onclick="window.location = '/api/ads?sale=true'"> ARTÍCULOS EN VENTA </button>
+        <button onclick="window.location = '/api/ads?sale=false'"> ARTÍCULOS EN BÚSQUEDA </button>
+        <button onclick="window.location = '/api/ads/tags'"> ARTÍCULOS POR TAGS </button>
+      </header>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Tags</th>
+        <th>OnSale</th>
+        <th>Pics</th>
+        <th>action</th>
+    </thead>
+    <br>
+    <tbody>
+        <% for(var i=0; i<anuncios.length; i++) {%>
+            <tr>
+                <td><%= anuncios[i].name %></td>
+                <td><%= anuncios[i].price %></td>
+                <td><%= anuncios[i].tags %></td>
+                <td><%= anuncios[i].sale %></td>
+                <td><%= anuncios[i].pic %></td>
+                <td>
+                    <button onclick="fetch('/api/ads?id=<%= anuncios[i]._id %>', { method: 'DELETE'});location.reload();">Eliminar</button>  
+                </td>
+            </tr>
+         <% } %>
+    </tbody>
+</table>
+
+    <br>
+    <h1>AÑADIR NUEVO ITEM</h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Tags</th>
+            <th>OnSale</th>
+            <th>Pics</th>
+            <th>action</th>
+        </thead>
+        <tbody>
+            <tr>
+                <form method="POST" action="">
+                <td><input name="name"  id="name" type="text" value="NOMBRE"></td>
+                <td><input name="price"  id="price" type="text" value = "PRECIO"> </td>
+                <td><input name="tags"  id="tags" type="text" value="TAGS"> </td>
+                <td><input name="sale"  id="sale" type="text" value="¿SE VENDE? true/false"> </td>
+                <td><input name="pic"  id="pic" type="text" value="IMAGEN"></td>
+                <td></tdZ><input type="submit" value="publicar"></td>
+        </tbody>
+        
+    </table>
+
+
+
+
+</form>
+
+<br>
+<br>
+
+<div id="num_items">
+    <h2>¿CUANTOS ARTÍCULOS QUIERES VER POR PÁGINA</h2>
+    <a href="/api/ads?sale=<%= filtro.sale %>" onclick="hide()">MOSTRAR TODOS LOS ARTÍCULOS</a>
+    <a href="/api/ads?sale=<%= filtro.sale %>&limit=3" onclick="show()" id="limit_3">MOSTRAR TRES ARTÍCULOS</a>
+</div>
+
+<div id="skip_items">
+    <h2 id="skip_title" style="">VER MAS ITEMS</h2>
+    <a id="skip_2" href="/api/ads?sale=<%= filtro.sale %>&limit=3&skip=3">SIGUIENTES ELEMENTOS</a>
+</div>
+
+<script src="/javascripts/functions.js"></script>
+</body>
+</html>

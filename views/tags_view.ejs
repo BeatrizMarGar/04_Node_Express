@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Nodepop</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <header>
+        <h1>NODEPOP</h1>
+        <button onclick="window.location = '/' "> INICIO </button>
+        <button onclick="window.location = '/api/ads'">TODOS LOS ARTÍCULOS</button>
+        <button onclick="window.location = '/api/ads/tags'"> ARTÍCULOS POR TAGS </button>
+        <button onclick="window.location = '/api/ads?sale=true'"> ARTÍCULOS EN VENTA </button>
+        <button onclick="window.location = '/api/ads?sale=false'"> ARTÍCULOS EN BÚSQUEDA </button>
+      </header>
+<tbody>
+  <table id="tag_form"> 
+    <% for(var i=0; i<tags.length; i++) {%>
+        <tr>
+            <td>
+                <input type="checkbox" id="<%= tags[i] %>" value="<%= tags[i] %>"><%= tags[i] %></input>
+            </td>
+            <br>
+        </tr>
+     <% } %>
+     <button onclick="tag_find()">ENVIAR BÚSQUEDA POR TAGS</button>
+      </table>
+</tbody>
+
+<script src="/javascripts/functions.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+header{
+  display: inline;
+}
+
+header > h1{
+  display: inline;
+  margin: 5%;
+}
+
+table{
+  margin-top: 5%;
+  position: relative
+}
+
+.esconder{
+  display: none
+}
+
+.mostrar{
+  display: block
+}

@@ -1,0 +1,34 @@
+<h1><%= title %></h1>
+<p><%= anuncios %></p>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Tags</th>
+        <th>OnSale</th>
+        <th>Pics</th>
+        <th>action</th>
+    </thead>
+    <tbody>
+        <% for(var i=0; i<anuncios.length; i++) {%>
+            <tr>
+                <td><%= anuncios[i].name %></td>
+                <td><%= anuncios[i].price %></td>
+                <td><%= anuncios[i].tags %></td>
+                <td><%= anuncios[i].sale %></td>
+                <td><%= anuncios[i].pic %></td>
+                <td><button onclick="">Delete</button></td>
+            </tr>
+         <% } %>
+         <tr>
+             <form method="POST" target="/api/ads">
+                <tr><input name="name" type="text"></tr>
+                <tr><input name="price" type="text"></tr>
+                <tr><input name="tags" type="text"></tr>
+                <tr><input name="sale" type="checkbox"></tr>
+                <tr><input name="pic" type="text"></tr>
+                <tr><input name="add" type="submit"></tr>
+             </form>
+         </tr>
+    </tbody>
+</table>

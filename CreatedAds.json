@@ -1,0 +1,69 @@
+{
+    "CreatedAds":[
+        {
+            "name": "Bike",
+            "sale": true,
+            "price": "150",
+            "pic": "/public/images/bike.jpg",
+            "tags": [
+                "lifestyle",
+                "sport"
+            ]
+        },
+        {
+            "name": "Nintendo Switch",
+            "sale": true,
+            "price": "279",
+            "pic": "images/nintendo_switch.jpg",
+            "tags": [
+                "game",
+                "entertainment",
+                "nintendo"
+            ]
+        },
+        {
+            "name": "Skate",
+            "sale": false,
+            "price": "63",
+            "pic": "",
+            "tags": [
+                "lifestyle",
+                "sport"
+            ]
+        },
+        {
+            "name": "White Yarn",
+            "sale": true,
+            "price": "3",
+            "pic": "",
+            "tags": [
+                "lifestyle",
+                "diy",
+                "crochet"
+            ]
+        },
+        {
+            "name": "Crochet",
+            "sale": true,
+            "price": "12",
+            "pic": "",
+            "tags": [
+                "lifestyle",
+                "diy",
+                "crochet"
+            ]
+        },
+        {
+            "name": "PS5",
+            "sale": false,
+            "price": "500",
+            "pic": "",
+            "tags": [
+                "game",
+                "entertainment",
+                "PlayStation"
+            ]
+        }
+        
+    ]
+}
