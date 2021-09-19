@@ -4,7 +4,7 @@
             "name": "Bike",
             "sale": true,
             "price": "150",
-            "pic": "/public/images/bike.jpg",
+            "pic": "/images/bike.jpg",
             "tags": [
                 "lifestyle",
                 "sport"
@@ -25,7 +25,7 @@
             "name": "Skate",
             "sale": false,
             "price": "63",
-            "pic": "",
+            "pic": "images/skate.jpg",
             "tags": [
                 "lifestyle",
                 "sport"
@@ -35,7 +35,7 @@
             "name": "White Yarn",
             "sale": true,
             "price": "3",
-            "pic": "",
+            "pic": "images/white_yarn.jpg",
             "tags": [
                 "lifestyle",
                 "diy",
@@ -46,7 +46,7 @@
             "name": "Crochet",
             "sale": true,
             "price": "12",
-            "pic": "",
+            "pic": "images/crochet.jpg",
             "tags": [
                 "lifestyle",
                 "diy",
@@ -57,7 +57,7 @@
             "name": "PS5",
             "sale": false,
             "price": "500",
-            "pic": "",
+            "pic": "images/ps5.jpg",
             "tags": [
                 "game",
                 "entertainment",
